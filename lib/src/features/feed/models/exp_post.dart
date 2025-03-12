@@ -30,8 +30,8 @@ final List<FeedPost> dummyPosts = [
 
   FeedPost(
     id: "3",
-    userId: "@vickyjames",
-    username: "Victor James",
+    userId: "@jonsnow",
+    username: "Jon Snow",
     profileImageUrl: Assets.images.imgProfile3.path,
     content: "Nature and Beauty.",
     imageUrls: [
@@ -66,7 +66,7 @@ final List<FeedPost> dummyPosts = [
     id: "5",
     userId: "@jonsnow",
     username: "Jon Snow",
-    profileImageUrl: Assets.images.imgProfile4.path,
+    profileImageUrl: Assets.images.imgProfile3.path,
     content:
         "A dream doesn't become reality through magic; it takes sweat, determination and hard work",
     imageUrls: [Assets.images.imgPost7.path],

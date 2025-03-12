@@ -24,7 +24,7 @@ class HomeSwitcher extends HookWidget {
           ),
           child: Icon(
             icon,
-            size: 16,
+            size: 18,
             color: isSelected ? Colors.white : Colors.black,
           ),
         ),

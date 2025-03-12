@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feed_app/src/features/feed/dialogs/add_post_dialog.dart';
 import 'package:flutter_feed_app/src/features/feed/widgets/feed_list.dart';
 import 'package:flutter_feed_app/styles/colors.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -21,7 +22,18 @@ class FeedScreen extends HookConsumerWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
+            ),
+            builder: (BuildContext context) {
+              return const CreatePostBottomSheet();
+            },
+          );
+        },
         backgroundColor: AppColors.primaryColor,
         child: Icon(Iconsax.edit, color: Colors.white, size: 28),
       ),

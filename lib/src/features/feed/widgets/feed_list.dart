@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feed_app/src/features/feed/dialogs/actions_dialog.dart';
 import 'package:flutter_feed_app/src/features/feed/widgets/feed_post_item.dart';
 import 'package:flutter_feed_app/styles/colors.dart';
 import 'package:gap/gap.dart';
@@ -88,10 +89,24 @@ class PostHeader extends StatelessWidget {
           ),
         ),
         const Gap(8),
-        const Icon(
-          Icons.more_horiz_sharp,
-          color: AppColors.iconColor,
-          size: 20,
+        GestureDetector(
+          onTap: () {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
+              ),
+              builder: (BuildContext context) {
+                return const ActionsBottomSheet();
+              },
+            );
+          },
+          child: const Icon(
+            Icons.more_horiz_sharp,
+            color: AppColors.iconColor,
+            size: 20,
+          ),
         ),
       ],
     );

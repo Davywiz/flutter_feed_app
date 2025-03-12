@@ -30,11 +30,11 @@ class TopAppBar extends StatelessWidget {
         Gap(8),
         CircleAvatar(
           radius: 16,
-          backgroundColor: AppColor.lowLight,
+          backgroundColor: AppColors.lowLight,
           child: Stack(
             clipBehavior: Clip.none, // Ensures the badge isn't clipped
             children: [
-              Icon(Iconsax.notification, color: AppColor.darkColor, size: 20),
+              Icon(Iconsax.notification, color: AppColors.darkColor, size: 20),
               Positioned(
                 right: -10,
                 top: -10,

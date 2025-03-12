@@ -38,6 +38,8 @@ dependencies:
   google_fonts: ^6.2.1
   gap: ^3.0.1
   flutter_svg: ^2.0.17
+  intl: ^0.20.2
+  equatable: ^2.0.7
 
 
 dev_dependencies:
@@ -70,6 +72,6 @@ flutter:
 flutter_gen:
   output: lib/gen/ # Optional (default: lib/gen/)
   line_length: 80 # Optional (default: 80)
-  
+
   integrations:
     flutter_svg: true

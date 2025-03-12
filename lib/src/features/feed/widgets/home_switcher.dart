@@ -34,7 +34,7 @@ class HomeSwitcher extends HookWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       decoration: BoxDecoration(
-        color: AppColor.lowLight,
+        color: AppColors.lowLight,
         borderRadius: BorderRadius.circular(96),
       ),
       child: Row(

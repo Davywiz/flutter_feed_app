@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feed_app/styles/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'features/feed/presentation/feed_screen.dart';
 
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xffFAFAFA),
-        primarySwatch: Colors.blue,
+        primaryColor: AppColors.primaryColor,
+
         // Google Fonts configuration
         textTheme: GoogleFonts.spaceGroteskTextTheme(
           Theme.of(context).textTheme.copyWith(

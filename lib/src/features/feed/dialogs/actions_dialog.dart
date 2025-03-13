@@ -32,7 +32,7 @@ class ActionsBottomSheet extends StatelessWidget {
               "Actions",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
-            const Gap(32),
+            const Gap(24),
             const _ActionItem(
               icon: Icons.notifications_off_outlined,
               text: 'Notify Me',
@@ -54,36 +54,41 @@ class _ActionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: EdgeInsets.zero,
-      leading: Icon(icon, size: 24, color: AppColors.darkColor),
-      splashColor: AppColors.lowLight,
-      onTap: () {},
-      title: Text(
-        text,
-        style: const TextStyle(
-          color: AppColors.darkColor,
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(color: AppColors.border)),
       ),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox(
-            height: 30,
-            child: const VerticalDivider(
-              color: AppColors.lowLight,
-              thickness: 1,
-            ),
-          ),
-          const Gap(10),
-          const Icon(
-            Icons.chevron_right_rounded,
-            size: 24,
+      child: ListTile(
+        contentPadding: EdgeInsets.only(bottom: 8),
+        leading: Icon(icon, size: 24, color: AppColors.darkColor),
+        splashColor: AppColors.lowLight,
+        onTap: () {},
+        title: Text(
+          text,
+          style: const TextStyle(
             color: AppColors.darkColor,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
           ),
-        ],
+        ),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(
+              height: 30,
+              child: const VerticalDivider(
+                color: AppColors.lowLight,
+                thickness: 1,
+              ),
+            ),
+            const Gap(10),
+            const Icon(
+              Icons.chevron_right_rounded,
+              size: 24,
+              color: AppColors.darkColor,
+            ),
+          ],
+        ),
       ),
     );
   }

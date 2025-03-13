@@ -27,6 +27,7 @@ class FeedSearchBar extends StatelessWidget {
         searchQueryText.value = val;
         onSearch(val);
       },
+      textInputAction: TextInputAction.search,
       decoration: InputDecoration(
         hintText: "Search feeds",
         hintStyle: const TextStyle(

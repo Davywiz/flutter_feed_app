@@ -100,8 +100,8 @@ class CustomNavigationBar extends HookWidget {
     return GestureDetector(
       onTap: () => selectedIndex.value = index,
       child: AnimatedContainer(
-        width: 70,
-        height: 70,
+        width: 65,
+        height: 65,
         duration: const Duration(milliseconds: 300),
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
@@ -123,7 +123,7 @@ class CustomNavigationBar extends HookWidget {
           children: [
             Icon(
               icon,
-              size: 24,
+              size: 20,
               color: isSelected ? AppColors.darkColor : AppColors.iconColor,
             ),
             const Gap(4),
@@ -131,7 +131,7 @@ class CustomNavigationBar extends HookWidget {
               label,
               style: TextStyle(
                 color: isSelected ? AppColors.darkColor : AppColors.iconColor,
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: isSelected ? FontWeight.w500 : FontWeight.normal,
               ),
             ),

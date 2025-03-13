@@ -1,0 +1,42 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.0' 
+          channel: 'stable'
+
+      # 3. Install dependencies
+      - name: Get packages
+        run: flutter pub get
+
+      # 4. Run tests
+      - name: Run widget tests
+        run: flutter test --machine > test-results.json
+        
+      # 5. Display test results
+      - name: Show test results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Flutter Test Results
+          path: test-results.json
+          reporter: flutter-json
+          fail-on-error: true

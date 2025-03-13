@@ -29,6 +29,8 @@ The project is structured into features for clarity and scalability.
  A GitHub Actions workflow (.github/workflows/flutter_test.yml) runs widget tests on each push/pull request to main.
 The workflow fails if any test fails, ensuring code quality.
 
+![Flutter CI](https://github.com/Davywiz/flutter_feed_app/workflows/Flutter%20CI/badge.svg)
+
 ## Screenshots
 ![Home Screen](screenshots/home_screen.png)
 
@@ -45,6 +47,6 @@ The workflow fails if any test fails, ensuring code quality.
 ![Image](screenshots/view_one_image_post.png)
 ![Image](screenshots/viewing_four_image_post.png)
 ![Image](screenshots/viewing_post_image.png)
-![Image](screenshots/viewing_three_image_post.png)
+![Image](screenshots/viewing_three_images_post.png)
 
 

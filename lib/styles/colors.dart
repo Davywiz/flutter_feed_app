@@ -12,4 +12,5 @@ class AppColors {
   static const Color username = Color(0xFF2B2B2F);
   static const Color iconColor = Color(0xFFA3A6B7);
   static const Color liked = Colors.red;
+  static const Color boxBorder = Color(0xFFEDEFF5);
 }

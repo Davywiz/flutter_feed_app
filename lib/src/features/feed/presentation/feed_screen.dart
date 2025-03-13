@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feed_app/src/features/feed/dialogs/add_post_dialog.dart';
+import 'package:flutter_feed_app/src/features/feed/widgets/bottom_navigation_bar.dart';
 import 'package:flutter_feed_app/src/features/feed/widgets/feed_list.dart';
 import 'package:flutter_feed_app/styles/colors.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -20,6 +21,7 @@ class FeedScreen extends HookConsumerWidget {
     final searchQueryText = useState('');
 
     return Scaffold(
+      bottomNavigationBar: CustomNavigationBar(),
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
         onPressed: () {

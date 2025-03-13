@@ -33,11 +33,12 @@ The workflow fails if any test fails, ensuring code quality.
 ![Flutter CI](https://github.com/Davywiz/flutter_feed_app/workflows/Flutter%20CI/badge.svg)
 
 ## Demo Video
-
-<video src="screenshots/demo_007.mp4" controls width="600"></video>
+[Watch the demo](screenshots/demo_007.mp4)
 
 
 ## Screenshots
+
+see /screenshots folder.
 
 ![Home Screen](screenshots/home_screen.png)
 

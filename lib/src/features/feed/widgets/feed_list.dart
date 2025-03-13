@@ -15,7 +15,7 @@ class FeedList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final feedPosts = ref.watch(feedProvider);
+    final feedPosts = ref.watch(feedNotifierProvider);
 
     if (feedPosts.isEmpty) {
       return const Center(child: Text("No posts found"));
@@ -126,7 +126,8 @@ class PostActions extends StatelessWidget {
         ActionButton(icon: Iconsax.messages_2, count: post.comments),
         const Gap(20),
         GestureDetector(
-          onTap: () => ref.read(feedProvider.notifier).toggleLike(post.id),
+          onTap:
+              () => ref.read(feedNotifierProvider.notifier).toggleLike(post.id),
           child: ActionButton(
             icon: post.isLiked ? Iconsax.heart5 : Iconsax.heart,
             count: post.likes,

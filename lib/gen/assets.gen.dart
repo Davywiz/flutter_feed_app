@@ -39,18 +39,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgPost3 =>
       const AssetGenImage('assets/images/img_post_3.jpg');
 
-  /// File path: assets/images/img_post_4.jpg
-  AssetGenImage get imgPost4 =>
-      const AssetGenImage('assets/images/img_post_4.jpg');
-
-  /// File path: assets/images/img_post_5.jpg
-  AssetGenImage get imgPost5 =>
-      const AssetGenImage('assets/images/img_post_5.jpg');
-
-  /// File path: assets/images/img_post_6.jpg
-  AssetGenImage get imgPost6 =>
-      const AssetGenImage('assets/images/img_post_6.jpg');
-
   /// File path: assets/images/img_post_7.jpg
   AssetGenImage get imgPost7 =>
       const AssetGenImage('assets/images/img_post_7.jpg');
@@ -87,9 +75,6 @@ class $AssetsImagesGen {
     imgPost12,
     imgPost2,
     imgPost3,
-    imgPost4,
-    imgPost5,
-    imgPost6,
     imgPost7,
     imgPost8,
     imgPost9,

@@ -1,15 +1,18 @@
 import 'package:flutter_feed_app/src/features/feed/models/exp_post.dart';
 import 'package:flutter_feed_app/src/features/feed/models/feed_post.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final feedProvider = StateNotifierProvider<FeedNotifier, List<FeedPost>>((ref) {
-  return FeedNotifier();
-});
+part 'feed_post_provider.g.dart';
 
-class FeedNotifier extends StateNotifier<List<FeedPost>> {
-  final List<FeedPost> _originalPosts = List.from(dummyPosts);
+@riverpod
+class FeedNotifier extends _$FeedNotifier {
+  late final List<FeedPost> _originalPosts;
 
-  FeedNotifier() : super(dummyPosts);
+  @override
+  List<FeedPost> build() {
+    _originalPosts = List.from(dummyPosts);
+    return dummyPosts;
+  }
 
   void toggleLike(String postId) {
     // Update original list

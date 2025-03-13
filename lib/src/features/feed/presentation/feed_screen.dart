@@ -62,7 +62,7 @@ class FeedScreen extends HookConsumerWidget {
                 controller: searchTextController,
                 searchQueryText: searchQueryText,
                 onSearch: (query) {
-                  ref.read(feedProvider.notifier).searchPosts(query);
+                  ref.read(feedNotifierProvider.notifier).searchPosts(query);
                 },
               ),
               const Gap(8),
